@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-
 namespace apc
 {
     class Program
@@ -64,4 +63,5 @@ namespace apc
             Syscalls.NtClose(hThread);
         }
     }
+
 }
