@@ -31,14 +31,6 @@ NtQueueApcThreadEx2(
 .\apc.exe {PID} {SHELLCODE_FULL_PATH}
 ```
 
-```c#
-
-Win32.RtlInitUnicodeString(
-    out Win32.UNICODE_STRING us,
-    @"\??\Z:\Syscalls\apc\msgbox64.bin"
-);
-```
-
 #### To-Do
 
 - [ ] Implement `ntdll!NtCreateThreadEx`
