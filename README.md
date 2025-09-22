@@ -25,6 +25,11 @@ NtQueueApcThreadEx2(
   <img src="https://i.imgur.com/9NnIkjY.png" alt="drawing"/> 
 </p>
 
+#### How to use?
+
+```
+.\apc.exe {PID} {SHELLCODE_FULL_PATH}
+
 ```c#
 
 Win32.RtlInitUnicodeString(
