@@ -28,3 +28,4 @@ NtQueueApcThreadEx2(
 #### To-Do
 
 - [ ] Implement ntdll!NtCreateThreadEx
+- [ ] Avoid ntdll!NtAllocateVirtualMemory
