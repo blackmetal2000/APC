@@ -24,3 +24,7 @@ NtQueueApcThreadEx2(
 <p align="center">
   <img src="https://i.imgur.com/9NnIkjY.png" alt="drawing"/> 
 </p>
+
+#### To-Do
+
+- [ ] Implement ntdll!NtCreateThreadEx
