@@ -25,6 +25,18 @@ NtQueueApcThreadEx2(
   <img src="https://i.imgur.com/9NnIkjY.png" alt="drawing"/> 
 </p>
 
+#### Caution
+
+Change the line above to your shellcode path.
+
+```c#
+
+Win32.RtlInitUnicodeString(
+    out Win32.UNICODE_STRING us,
+    @"\??\Z:\Syscalls\apc\msgbox64.bin"
+);
+```
+
 #### To-Do
 
 - [ ] Implement `ntdll!NtCreateThreadEx`
