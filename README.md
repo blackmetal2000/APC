@@ -2,7 +2,7 @@
 
 #### Introduction
 
-This POC demonstrates the new undocumented syscall `NtQueueApcThreadEx2`, used for APC code injection. By default, the thread must be in an alertable state. However, with `QUEUE_USER_APC_FLAGS_SPECIAL_USER_APC`, this requirement can be bypassed. Futhermore, this project only Direct Syscalls.
+This POC demonstrates the new undocumented syscall `NtQueueApcThreadEx2`, used for APC code injection. By default, the thread must be in an alertable state. However, with `QUEUE_USER_APC_FLAGS_SPECIAL_USER_APC`, this requirement can be bypassed. Futhermore, this project only NT APIs + Direct Syscalls.
 
 #### Signature
 
