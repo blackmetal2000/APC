@@ -61,6 +61,8 @@ namespace apc
             );
 
             Syscalls.NtClose(hThread);
+            Syscalls.NtClose(hProcess);
         }
     }
 }
+
